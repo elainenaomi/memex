@@ -19,6 +19,7 @@ defmodule MemexWeb.Router do
 
     get "/", PageController, :home
     resources "/memes", MemeController
+    live "/search", MemeLive
   end
 
   # Other scopes may use custom stacks.
