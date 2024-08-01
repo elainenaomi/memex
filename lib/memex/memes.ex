@@ -101,4 +101,9 @@ defmodule Memex.Memes do
   def change_meme(%Meme{} = meme, attrs \\ %{}) do
     Meme.changeset(meme, attrs)
   end
+
+  def search_memes(query) do
+    from(m in Meme, where: ilike(m.name, ^"%#{query}%"))
+    |> Repo.all()
+  end
 end

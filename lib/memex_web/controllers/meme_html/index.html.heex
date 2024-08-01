@@ -7,6 +7,8 @@
   </:actions>
 </.header>
 
+<.live_component module={MemexWeb.MemeLive.Search} id="search" />
+
 <.table id="memes" rows={@memes} row_click={&JS.navigate(~p"/memes/#{&1}")}>
   <:col :let={meme} label="Name"><%= meme.name %></:col>
   <:col :let={meme} label="Link"><%= meme.link %></:col>
