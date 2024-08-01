@@ -1,0 +1,25 @@
+<.header>
+  Listing Memes
+  <:actions>
+    <.link href={~p"/memes/new"}>
+      <.button>New Meme</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="memes" rows={@memes} row_click={&JS.navigate(~p"/memes/#{&1}")}>
+  <:col :let={meme} label="Name"><%= meme.name %></:col>
+  <:col :let={meme} label="Link"><%= meme.link %></:col>
+  <:col :let={meme} label="Description"><%= meme.description %></:col>
+  <:action :let={meme}>
+    <div class="sr-only">
+      <.link navigate={~p"/memes/#{meme}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/memes/#{meme}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={meme}>
+    <.link href={~p"/memes/#{meme}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>
