@@ -7,6 +7,9 @@
   </:actions>
 </.header>
 
+
+<MemeSearch.search query={@query} memes={@memes} />
+
 <.table id="memes" rows={@memes} row_click={&JS.navigate(~p"/memes/#{&1}")}>
   <:col :let={meme} label="Name"><%= meme.name %></:col>
   <:col :let={meme} label="Link"><%= meme.link %></:col>
