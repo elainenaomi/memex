@@ -18,6 +18,7 @@ defmodule MemexWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    resources "/memes", MemeController
   end
 
   # Other scopes may use custom stacks.
