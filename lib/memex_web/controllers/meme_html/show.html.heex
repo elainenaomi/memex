@@ -1,0 +1,17 @@
+<.header>
+  Meme <%= @meme.id %>
+  <:subtitle>This is a meme record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/memes/#{@meme}/edit"}>
+      <.button>Edit meme</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @meme.name %></:item>
+  <:item title="Link"><%= @meme.link %></:item>
+  <:item title="Description"><%= @meme.description %></:item>
+</.list>
+
+<.back navigate={~p"/memes"}>Back to memes</.back>
