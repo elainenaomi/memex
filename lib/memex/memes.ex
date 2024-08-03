@@ -103,7 +103,9 @@ defmodule Memex.Memes do
   end
 
   def search_memes(query) do
-    from(m in Meme, where: ilike(m.name, ^"%#{query}%"))
+    from(m in Meme,
+      where: ilike(m.name, ^"%#{query}%") or ilike(m.description, ^"%#{query}%")
+    )
     |> Repo.all()
   end
 end
