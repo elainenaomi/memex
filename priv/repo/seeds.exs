@@ -25,7 +25,6 @@ Repo.insert! %Meme{
   description: "Gabriel Medina no ar com a prancha"
 }
 
-
 Repo.insert! %Meme{
   name: "Meme Medina e Tilibra",
   link: "https://x.com/feitosafut/status/1818018002673213737",
@@ -34,7 +33,7 @@ Repo.insert! %Meme{
 
 Repo.insert! %Meme{
   name: "Meme Medina Rayssa Ginástica Bala Loka",
-  link: "https://x.com/feitosafut/status/1818018002673213737",
+  link: "https://x.com/timebrasil/status/1818642504067019086",
   description: "Skate Surf Ginástica BMX"
 }
 
